@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>node-mysql</title>
+</head>
+<body>
+    <h1>hello node with mysql</h1>
+    <hr>
+    <div style="display: flex">
+        <div style="flex-grow: 1">
+
+            <div>
+                <label>ID:
+                    <input type="text" id="empId" placeholder="Enter empId to get details"><br><span id="empIdMsg"></span>
+                </label>
+            </div>
+            <div>
+                <label>First Name:
+                    <input type="text" id="first_name">
+                </label>
+            </div>
+            <div>
+                <label>last Name:
+                    <input type="text" id="last_name">
+                </label>
+            </div>
+            <div>
+                <label>Email:
+                    <input type="text" id="email">
+                </label>
+            </div>
+            <div>
+                <label>password:
+                    <input id="password">
+                </label>
+            </div>
+            <div>
+                    <button id="Add">Add</button>
+                    <button id="Update">Update</button>
+                    <button id="Delete">Delete</button>
+                    <button id="GetOne">Get</button>
+                    <button id="GetAll">Get All</button>
+                    <button id="ClearEmp">Clear</button>
+                </div>
+                <div id="msgPanel">
+                    </div>
+        </div>
+        <div id="rightPanel" style="border: 2px blue solid;flex-grow: 3; "></div>
+    </div>
+
+<script src="./app.js"></script>
+</body>
+</html>
