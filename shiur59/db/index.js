@@ -1,32 +1,32 @@
-const mysql = require('mysql');
+const mysql = require('mysql')
 let con;
 
-function Open(app)
-{
-    return new Promise( (resolve, reject)=>
-    {
-        con= mysql.createConnection({
-            host:'localhost',
-            user:'root',
-            password:'',
+function Open(app) {
+    return new Promise((resolve, reject) => {
+        con = mysql.createConnection({
+            host: 'localhost',
+            user: 'root',
+            password: '',
             database: 'mernMysql'
         });
-        con.connect((err)=>
-        {
-            if(err){
+        con.connect((err) => {
+            if (err) {
                 con.end()
                 reject(err)
-            }else{
-                console.log('mySql is connected');
-                app.set('CONNECTION',con )
-                resolve(true)
+            } else {
+                console.log('mySql is connected...')
+                app.set('CONNECTION', con);
+                resolve(true);
             }
         })
     });
 }
 
-function close(){
+function Close() {
     con.end();
 }
 
-module.exports= {Open, close}
+module.exports = {
+    Open,
+    Close
+}
